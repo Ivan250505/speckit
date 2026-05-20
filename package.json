@@ -1,0 +1,12 @@
+{
+  "name": "sistema-inventario",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && .venv\\Scripts\\python.exe -m uvicorn main:app --reload --port 8000"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
