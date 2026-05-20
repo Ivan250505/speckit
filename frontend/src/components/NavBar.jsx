@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { API_BASE_URL } from '../services/api'
 
 const activeClass = 'bg-blue-600 text-white'
 const inactiveClass = 'text-sm px-3 py-1 rounded hover:bg-gray-100'
@@ -25,7 +26,7 @@ export default function NavBar(){
           Categorías
         </NavLink>
         <a
-          href="http://127.0.0.1:8000/api/v1/products/export"
+          href={`${API_BASE_URL}/products/export`}
           target="_blank"
           rel="noreferrer"
           className="text-sm px-3 py-1 rounded hover:bg-gray-100"
